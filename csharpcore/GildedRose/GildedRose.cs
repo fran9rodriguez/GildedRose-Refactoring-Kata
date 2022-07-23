@@ -1,16 +1,27 @@
-﻿using System.Collections.Generic;
+﻿
+using System.Collections.Generic;
 
 namespace GildedRoseKata
 {
     public class GildedRose
     {
         IList<Item> Items;
+
         public GildedRose(IList<Item> Items)
         {
             this.Items = Items;
         }
 
         public void UpdateQuality()
+        {
+           
+            for (var i = 0; i < Items.Count; i++)
+            {
+                ParentItem parentItem = FactoryItem.GetItem(Items[i]);
+            }
+        }
+
+        public void UpdateQuality_old()
         {
             for (var i = 0; i < Items.Count; i++)
             {
