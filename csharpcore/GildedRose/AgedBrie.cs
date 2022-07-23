@@ -14,6 +14,7 @@ namespace GildedRoseKata
             if (!base.isOutOfDate(item) && !base.isQualityGreaterOrEqualThanLimit(item))
             {                
                 item.Quality++;
+
             }          
             
         }
